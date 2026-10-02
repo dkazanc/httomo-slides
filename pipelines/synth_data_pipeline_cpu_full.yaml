@@ -48,5 +48,4 @@
     center: null
     sinogram_order: false
     algorithm: gridrec
-    filter_name: shepp
     init_recon: null

@@ -28,6 +28,7 @@
   module_path: httomolibgpu.prep.normalize
   parameters:
     flats_multiplier: 1.0
+    darks_multiplier: 1.0
     upper_bound: null
     lower_bound: null
 - method: minus_log
@@ -49,4 +50,4 @@
     filter_type: shepp
     filter_freq_cutoff: 1.0
     recon_size: null
-    recon_mask_radius: 0.95 
+    recon_mask_radius: 0.95
