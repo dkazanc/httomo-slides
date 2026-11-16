@@ -1,12 +1,10 @@
 ---
-title: "HTTomo - a high-throughput tomography software in Python for large data processing"
-subtitle: "Full tutorial with exercises"
+title: "HTTomo framework overview and latest HPC benchmarks"
+subtitle: "Data Analysis Group meeting, 19.11.2026"
 author:
-  - name: "Imaging Team (part of DAG)"
+  - name: "Imaging Team"
     affiliation: "Diamond Light Source, UK"
 ---
-
-## Workshop objectives
 
 <!--
 ## Workshop agenda
@@ -20,7 +18,9 @@ author:
 | **10:25–10:45** | ☕ **Break** |
 | **10:45–11:30** | **Reconstruction, real data** — reconstruction, centering, sweeps and outputs |
 | **11:30–12:00** | **Advanced concepts** — large data, GPU processing, HPC |
--->
+
+
+## Workshop objectives
 
 By the end of this session, you will be able to:
 
@@ -31,6 +31,7 @@ By the end of this session, you will be able to:
 - visualise the results
 - perform parameter sweeps
 - understand how HTTomo applies GPU and HPC concepts to large-data processing
+-->
 
 ## 
 
@@ -40,7 +41,7 @@ By the end of this session, you will be able to:
 }
 
 ::: {.footer}
-[Diamond Light Source website](https://www.diamond.ac.uk/Home.html)
+[Diamond Light Source](https://www.diamond.ac.uk/Home.html)
 :::
 
 ## 
@@ -57,6 +58,47 @@ By the end of this session, you will be able to:
 
 ## What is HTTomo?
 
+**HTTomo is open-source software for parallel-beam tomography data processing and reconstruction.**
+
+It is designed for high-throughput processing, i.e., handling large amounts of scan data with computational efficiency.
+
+::: {style="text-align: center; margin: 1.2em 0; padding: 0.7em 0; border-top: 2px solid #66c2d7; border-bottom: 2px solid #66c2d7; font-size: 1.2em;"}
+**Load scan data → Correct the images → Reconstruct → Save results**
+:::
+
+:::: {.columns}
+::: {.column width="48%"}
+
+::: {.fragment}
+
+### You provide
+
+- **Scan data:** X-ray images taken at different angles saved into a data file. 
+- **A processing recipe:** a YAML text file listing the steps or methods and their parameters.
+
+:::
+
+:::
+::: {.column width="48%"}
+::: {.fragment}
+
+### HTTomo handles
+
+- Running the processing steps in descending order.
+- Managing data and memory, with support for GPU processing and HPC clusters.
+
+:::
+:::
+::::
+
+## Input and Output in HTTomo {#input-output}
+
+![](images/in_out_tomography_httomo.png){width=80%}
+
+
+
+## What else is HTTomo?
+
 :::: {.columns}
 
 ::: {.column width="27%"}
@@ -65,21 +107,21 @@ By the end of this session, you will be able to:
 
 ::: {.column width="68%"}
 
-### Designed for high-throughput parallel-beam tomography
-
-- **Scalable processing** for increasingly large datasets
-- **GPU computation** with fewer host–device transfers
-- **Plug-and-play methods** using libraries such as TomoPy and accelerated GPU/CPU in-house libraries
-- **Independent and replaceable user-interface layer**
-- Built using **modern Python development** practices, including comprehensive testing, mocking, type checking, and automated quality checks.
-
+- A software written in modern **Python** language, using object-oriented design.
+- A framework for **parallel data processing**.
+- Designed to **scale to increasingly large datasets**.
+- Supports **plug-and-play processing methods** from TomoPy and in-house GPU-accelerated libraries.
+- Separates processing from an **independent, replaceable user interface**.
 :::
 ::::
 
 ::: {.footer}
-[HTTomo documentation](https://diamondlightsource.github.io/httomo/)
+[HTTomo github page](https://github.com/DiamondLightSource/httomo)
 :::
 
+
+
+<!--
 ## Installation of HTTomo and its dependencies 
 
 
@@ -283,6 +325,7 @@ You should now have:
 - GPU processing on Linux/WSL when a compatible NVIDIA GPU and the GPU packages are available
 - a working `python -m httomo` command
 
+-->
 
 ## HTTomo framework (main concepts)
 

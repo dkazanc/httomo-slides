@@ -8,7 +8,7 @@
    version="1.1"
    id="svg94"
    sodipodi:docname="dls_tomography_slide.svg"
-   inkscape:version="1.2.2 (b0a8486541, 2022-12-01)"
+   inkscape:version="1.4.4 (dcaf3e7d9e, 2026-05-05)"
    xml:space="preserve"
    xmlns:inkscape="http://www.inkscape.org/namespaces/inkscape"
    xmlns:sodipodi="http://sodipodi.sourceforge.net/DTD/sodipodi-0.dtd"
@@ -26,12 +26,12 @@
      inkscape:deskcolor="#d1d1d1"
      showgrid="false"
      inkscape:zoom="0.68229167"
-     inkscape:cx="960"
+     inkscape:cx="482.9313"
      inkscape:cy="543.0229"
      inkscape:window-width="1920"
      inkscape:window-height="1011"
      inkscape:window-x="0"
-     inkscape:window-y="32"
+     inkscape:window-y="0"
      inkscape:window-maximized="1"
      inkscape:current-layer="g92" /><title
      id="title">Tomographic imaging at Diamond Light Source</title><desc
@@ -75,7 +75,7 @@
          sodipodi:role="line"
          id="tspan313"
          x="118"
-         y="401.5">+3 after upgrade in 2028</tspan></text><text
+         y="401.5">+2 after upgrade in 2028</tspan></text><text
        x="486"
        y="245"
        font-size="26px"
