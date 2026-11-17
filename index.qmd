@@ -327,9 +327,15 @@ You should now have:
 
 -->
 
-## HTTomo framework (main concepts)
+## HTTomo framework
 
-![](images/cool_httomo_framework_autogen.png){.nostretch fig-align="center" width="70%"}
+- OpenMPI-based framework for **parallel processing** of tomography data
+- Chunks, blocks and sections for **data partitioning**
+- HTTomo memory management for **CPU and GPU** processing
+- HTTomo wrappers for **plug-and-play** processing methods
+- Reconstruction eco-system
+- HTTomo features
+
 
 
 ##  What is Open MPI?
