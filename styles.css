@@ -149,3 +149,31 @@
   width: 100%;
   margin: 0;
 }
+/* DIAD geometry and supplied reconstruction comparison. */
+#diad-laminography .diad-comparison {
+  display: grid;
+  grid-template-columns: 30% 66%;
+  gap: 4%;
+  align-items: start;
+}
+#diad-laminography .diad-comparison h3 { font-size: 27px; margin: 10px 0 12px; }
+#diad-laminography .diad-comparison p { margin: 8px 0; }
+#diad-laminography .diad-comparison img { width: 100%; object-fit: contain; }
+#diad-laminography .diad-geometry img { height: 460px; }
+#diad-laminography .diad-geometry p { font-size: 23px; }
+#diad-laminography .diad-results img { height: 235px; }
+
+/* Benchmark slides: one explicit result with room for the evidence. */
+.reveal .benchmark-slide .benchmark-takeaway {
+  color: #f1f1f1;
+  font-size: 30px;
+  border-left: 4px solid #65cbd5;
+  padding-left: 16px;
+  margin: 12px 0 14px;
+}
+.reveal .benchmark-slide .benchmark-takeaway p { margin: 0; }
+.reveal .benchmark-slide .benchmark-context { font-size: 22px; color: #b9c3cb; }
+.reveal .benchmark-slide .benchmark-context p { margin: 4px 0 10px; }
+.reveal .benchmark-slide img { max-height: 500px; width: auto; max-width: 100%; object-fit: contain; }
+.reveal .benchmark-slide figure { margin: 12px 0 0; }
+.reveal .benchmark-slide figcaption { font-size: 17px; line-height: 1.25; margin-top: 8px; }
