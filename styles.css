@@ -163,17 +163,25 @@
 #diad-laminography .diad-geometry p { font-size: 23px; }
 #diad-laminography .diad-results img { height: 235px; }
 
-/* Benchmark slides: one explicit result with room for the evidence. */
+/* Benchmark evidence fills the usable slide width; no repeated figure titles. */
+.reveal .benchmark-slide h2 { font-size: 52px; margin-bottom: 18px; }
 .reveal .benchmark-slide .benchmark-takeaway {
   color: #f1f1f1;
-  font-size: 30px;
+  font-size: 28px;
   border-left: 4px solid #65cbd5;
   padding-left: 16px;
-  margin: 12px 0 14px;
+  margin: 8px 0 10px;
 }
 .reveal .benchmark-slide .benchmark-takeaway p { margin: 0; }
-.reveal .benchmark-slide .benchmark-context { font-size: 22px; color: #b9c3cb; }
-.reveal .benchmark-slide .benchmark-context p { margin: 4px 0 10px; }
-.reveal .benchmark-slide img { max-height: 500px; width: auto; max-width: 100%; object-fit: contain; }
-.reveal .benchmark-slide figure { margin: 12px 0 0; }
-.reveal .benchmark-slide figcaption { font-size: 17px; line-height: 1.25; margin-top: 8px; }
+.reveal .benchmark-slide .benchmark-context { font-size: 21px; color: #b9c3cb; }
+.reveal .benchmark-slide .benchmark-context p { margin: 2px 0 6px; }
+.reveal .benchmark-slide .quarto-figure { width: 100%; margin: 6px 0 0; }
+.reveal .benchmark-slide figure { width: 100%; margin: 0; }
+.reveal .benchmark-slide figure p { margin: 0; }
+.reveal .benchmark-slide img {
+  display: block; width: 100%; max-width: 100%; height: auto;
+  max-height: 610px; object-fit: contain; margin: 0 auto;
+}
+.reveal .benchmark-slide figcaption {
+  font-size: 16px; line-height: 1.2; margin-top: 4px; text-align: left;
+}

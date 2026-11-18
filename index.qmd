@@ -351,16 +351,38 @@ GPU implementations are faster for all five tested methods, including amortised 
 HTTomoLibGPU on Blackwell GPU versus TomoPy on a 96-core AMD EPYC CPU.
 :::
 
-![Source: Kazantsev et al., manuscript in preparation *“High-throughput GPU tomographic software HTTomo for high-performance computing at Diamond Light Source”*.](images/timing_analysis_dark.png){width="100%" fig-alt="CPU vs GPU methods with transfers" fig-align="center"}
+![Kazantsev et al., manuscript in preparation.](images/benchmarks/preprocessing-times.svg){width="100%" fig-alt="CPU vs GPU methods with transfers" fig-align="center"}
 
 
-## GPU pre-processing: transfer costs {#gpu_methods_preproc2 .benchmark-slide}
+::: {.notes}
+Figure restyled for this presentation. Benchmark source: Kazantsev et al.,
+manuscript in preparation, “High-throughput GPU tomographic software HTTomo
+for high-performance computing at Diamond Light Source”.
+Mean timing and speedup values are reproduced from the supplied benchmark
+figures. Original repeated-run JSON files were not available locally. The
+restyled timing figure shows displayed means only, without standard-deviation
+error bars. Transfer-inclusive timing endpoints use the rounded speedup labels.
+:::
+
+
+## GPU pre-processing: including transfer costs {#gpu_methods_preproc2 .benchmark-slide}
 
 ::: {.benchmark-takeaway}
 Including transfers, the tested GPU methods achieve **6.7–29.2× speedup** over CPU implementations.
 :::
 
-![Source: Kazantsev et al., manuscript in preparation *“High-throughput GPU tomographic software HTTomo for high-performance computing at Diamond Light Source”*.](images/speedup_analysis.png){width="100%" fig-alt="CPU vs GPU methods with transfers" fig-align="center"}
+![Kazantsev et al., manuscript in preparation.](images/benchmarks/preprocessing-speedup.svg){width="100%" fig-alt="CPU vs GPU methods with transfers" fig-align="center"}
+
+
+::: {.notes}
+Figure restyled for this presentation. Benchmark source: Kazantsev et al.,
+manuscript in preparation, “High-throughput GPU tomographic software HTTomo
+for high-performance computing at Diamond Light Source”.
+Mean timing and speedup values are reproduced from the supplied benchmark
+figures. Original repeated-run JSON files were not available locally. The
+restyled timing figure shows displayed means only, without standard-deviation
+error bars. Transfer-inclusive timing endpoints use the rounded speedup labels.
+:::
 
 
 ## GPU reconstruction: execution time {#gpu_methods_recon .benchmark-slide}
@@ -373,7 +395,14 @@ Including transfers, the tested GPU methods achieve **6.7–29.2× speedup** ove
 Data chunk: `[1800, 200, 2560]` · NVIDIA V100 GPU
 :::
 
-![](images/recon_methods_comparison.png){width="100%" fig-alt="GPU recon comparison" fig-align="center"}
+![](images/benchmarks/reconstruction-times.svg){width="100%" fig-alt="GPU recon comparison" fig-align="center"}
+
+
+::: {.notes}
+Figure restyled for this presentation. Benchmark source: Kazantsev et al.,
+manuscript in preparation, “High-throughput GPU tomographic software HTTomo
+for high-performance computing at Diamond Light Source”.
+:::
 
 
 ## Workstation pipeline runtimes {#workstation-benchmark .benchmark-slide}
@@ -382,10 +411,17 @@ Data chunk: `[1800, 200, 2560]` · NVIDIA V100 GPU
 **HTTomo: 154.5 s** end to end; TomoCuPy is fastest in this comparison at 111 s.
 :::
 
-![](images/pipeline-runtime-comparison.svg){
+![](images/benchmarks/workstation-times.svg){
   width=100%
   fig-alt="DLS"
 }
+
+
+::: {.notes}
+Figure restyled for this presentation. Benchmark source: Kazantsev et al.,
+manuscript in preparation, “High-throughput GPU tomographic software HTTomo
+for high-performance computing at Diamond Light Source”.
+:::
 
 
 ## Single node: where method time is spent {#single-node-methods .benchmark-slide}
@@ -398,11 +434,22 @@ Data chunk: `[1800, 200, 2560]` · NVIDIA V100 GPU
 Four NVIDIA RTX PRO 6000 Blackwell GPUs · 84 GB dataset
 :::
 
-![Source: Kazantsev et al., manuscript in preparation *"High-throughput GPU tomographic software HTTomo for high-performance computing at Diamond Light Source"*.](images/blackwell4_208607_part1.png){
+![Kazantsev et al., manuscript in preparation.](images/benchmarks/single-node-methods.svg){
   width=100%
   fig-alt="Blackwell 4 GPUs run"
   fig-align="left"
 }
+
+
+::: {.notes}
+Figure restyled for this presentation. Benchmark source: Kazantsev et al.,
+manuscript in preparation, “High-throughput GPU tomographic software HTTomo
+for high-performance computing at Diamond Light Source”.
+Derived from blackwell4_208607.csv, averaged across ranks. Gray bars show
+method wall time; cyan shows GPU kernel time within each method. Output method
+wall times are gold. These quantities overlap and must not be summed. Display
+names are shortened; original method identifiers remain in the source CSV.
+:::
 
 
 ## Single node: processing and data movement {#single-node-components .benchmark-slide}
@@ -415,11 +462,18 @@ Four NVIDIA RTX PRO 6000 Blackwell GPUs · 84 GB dataset
 Four Blackwell GPUs · elapsed runtime: 189.8 s · timers may overlap
 :::
 
-![Source: Kazantsev et al., manuscript in preparation *"High-throughput GPU tomographic software HTTomo for high-performance computing at Diamond Light Source"*.](images/blackwell4_208607_part3.png){
+![Kazantsev et al., manuscript in preparation.](images/benchmarks/single-node-components.svg){
   width=100%
   fig-alt="Blackwell 4 GPUs run"
   fig-align="left"
 }
+
+
+::: {.notes}
+Figure restyled for this presentation. Benchmark source: Kazantsev et al.,
+manuscript in preparation, “High-throughput GPU tomographic software HTTomo
+for high-performance computing at Diamond Light Source”.
+:::
 
 
 ## Multiple nodes: pipeline runtime {#multinode-runtime .benchmark-slide}
@@ -428,11 +482,18 @@ Four Blackwell GPUs · elapsed runtime: 189.8 s · timers may overlap
 With **8 GPUs per node**, two nodes reduce runtime from **134.4 s to 68.1 s**.
 :::
 
-![Source: Kazantsev et al., manuscript in preparation *"High-throughput GPU tomographic software HTTomo for high-performance computing at Diamond Light Source"*.](images/blackwell_scaling.png){
+![Kazantsev et al., manuscript in preparation.](images/benchmarks/multinode-runtime.svg){
   width=100%
   fig-alt="Blackwell multinode benchmarks"
   fig-align="left"
 }
+
+
+::: {.notes}
+Figure restyled for this presentation. Benchmark source: Kazantsev et al.,
+manuscript in preparation, “High-throughput GPU tomographic software HTTomo
+for high-performance computing at Diamond Light Source”.
+:::
 
 
 ## Scaling from one to two nodes {#multinode-speedup .benchmark-slide}
@@ -445,11 +506,18 @@ Doubling the nodes gives **1.83–2.12× speedup** at the same GPU count per nod
 Each point compares one versus two nodes using the indicated GPUs per node.
 :::
 
-![Source: Kazantsev et al., manuscript in preparation *"High-throughput GPU tomographic software HTTomo for high-performance computing at Diamond Light Source"*.](images/blackwell_scaling_speedup.png){
+![Kazantsev et al., manuscript in preparation.](images/benchmarks/multinode-speedup.svg){
   width=100%
   fig-alt="Blackwell multinode benchmarks"
   fig-align="left"
 }
+
+
+::: {.notes}
+Figure restyled for this presentation. Benchmark source: Kazantsev et al.,
+manuscript in preparation, “High-throughput GPU tomographic software HTTomo
+for high-performance computing at Diamond Light Source”.
+:::
 
 
 ## What's next for HTTomo? {#cpu-memory-future}
